@@ -76,9 +76,6 @@ Open the local URL shown in the terminal (usually http://localhost:8501).
   - Heart Disease Detected
   - No Heart Disease
 
-## 📸 Application Preview
-
-A screenshot of the Streamlit app can be added here once you have one ready.
 
 ## 📌 Disclaimer
 
