@@ -23,7 +23,7 @@ st.set_page_config(page_title="Heart Disease Prediction",
                    page_icon="🫀", layout="centered")
 
 st.title("🩺Heart Disease Prediction App")
-st.write("This app predicts the likelihood of heart disease based on patient health data.")
+st.write("This educational model estimates a dataset-based classification from entered health parameters. It is not a medical diagnosis.")
 
 st.markdown("---")
 
@@ -86,7 +86,7 @@ input_encoded = pd.get_dummies(input_df, columns=categorical_cols, drop_first=Tr
 expected_features = model.feature_names_in_
 input_encoded = input_encoded.reindex(columns=expected_features, fill_value=0)
 # ensures the DataFrame columns exactly match the model's training features
-input_encoded[numerical_cols] = scaler.fit_transform(input_encoded[numerical_cols])
+input_encoded[numerical_cols] = scaler.transform(input_encoded[numerical_cols])
 
 
 if st.button("🩺 Predict Heart Disease Risk"):
@@ -98,4 +98,4 @@ if st.button("🩺 Predict Heart Disease Risk"):
         st.success(" No signs of Heart Disease detected.")
 
 st.markdown("---")
-st.caption("Mini_Project")
+st.caption("Educational prototype only — not clinically validated. Do not use for medical decisions.")
